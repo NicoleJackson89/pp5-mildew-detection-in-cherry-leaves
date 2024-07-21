@@ -24,7 +24,8 @@ def page_cherry_leaves_visualizer_body():
         f" Powdery Mildew-Infected Cherry Leaf:\n"
         f" * Color - Exhibits white or grayish powdery patches, typically starting on the upper surface.\n"
         f" * Texture - Powdery or dusty appearance on the leaf.\n"
-        f" * Shape - Leaves may be curled, twisted, or distorted, with severe cases leading to yellowing and early leaf drop.\n")
+        f" * Shape - Leaves may be curled, twisted, or distorted, with severe cases leading to yellowing "
+        f" and early leaf drop.\n")
     
     version = 'v2'
     if st.checkbox("Difference between average and variability image"):
