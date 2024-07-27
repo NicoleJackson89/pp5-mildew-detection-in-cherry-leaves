@@ -28,11 +28,11 @@ def page_summary_body():
         f" \n")
 
     st.warning(
-        f"**The project has three business requirements:**\n\n"
+        f"**Project business requirements**\n\n"
         f" 1) A study analysis to differentiate visually between a healthy and powdery mildew cherry leaves.\n\n"
         f" 2) An accurate prediction of whether a given leaf is infected with powdery mildew or not.\n\n"
         f" 3) Download a report detailing the predictions for the examined leaves.")
 
     st.write(
-        f" For additional information, please visit and **read** the "
+        f" For additional information, please visit the "
         f" [Project README file](https://github.com/NicoleJackson89/pp5-mildew-detection-in-cherry-leaves#readme).")

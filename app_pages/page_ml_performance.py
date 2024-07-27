@@ -6,7 +6,7 @@ from src.machine_learning.evaluate_clf import load_test_evaluation
 
 
 def page_ml_performance_metrics():
-    version = 'v6'
+    version = 'v7'
 
     st.write("### Label Frequencies on Train, Validation and Test Sets")
 
@@ -27,6 +27,7 @@ def page_ml_performance_metrics():
     st.write("### Model History")
 
     st.info(
+        f" **Model training - Accuracy and Loss**\n\n"
         f" Accuracy measures how closely the model's predictions (accuracy) match the true data (val_acc).\n"
         f" A good model that performs well on unseen data demonstrates its ability to generalize and avoid overfitting to the training dataset.\n\n"
         f" The loss is the total of errors made for each example in the training (loss) or validation (val_loss) sets.\n"
@@ -39,6 +40,42 @@ def page_ml_performance_metrics():
     with col2:
         model_loss = plt.imread(f"outputs/{version}/model_training_losses.png")
         st.image(model_loss, caption='Model Training Losses')
+
+    st.info(
+        f" **The model learning ROC curve**\n\n"
+        f" Loss (Blue) and Validation Loss (Green):\n "
+        f" * Loss measures the prediction accuracy, the lower the loss the better.\n"
+        f" indicating good performance on unseen data.\n\n"
+        f"Accuracy (Orange) and Validation Accuracy (Red):\n"
+        f" * Accuracy measures the proportion of correct predictions.\n\n"
+        f"In summary, both the training and validation losses decrease and stabilize at low values, indicating "
+        f" that the model has converged; the high training and validation accuracies show the model is "
+        f" performing well; and the close alignment between the training and validation metrics indicates the "
+        f" model is not overfitting and can generalize well on new data.")
+
+    model_results_curve = plt.imread(f"outputs/{version}/model_combined.png")
+    st.image(model_results_curve, caption='Model Training Accuracy & Losses')
+
+    st.info(
+        f" **Confusion Matrix**\n\n"
+        f" The confusion matrix is used to evaluate the performance of the model."
+        f" It compares the actual labels (true values) with the predicted labels given by the model.\n\n"
+        f" * The model correctly identified 210 healthy instances and 209 powdery mildew instances.\n "
+        f" * The model made 3 mistakes: 1 healthy instance was incorrectly classified as powdery mildew, and 2 "
+        f" powdery mildew instances were incorrectly classified as healthy.")
+
+    conf_matrix = plt.imread(f"outputs/{version}/confusion_matrix.png")
+    st.image(conf_matrix, caption='Confusion matrix')
+
+    st.info(
+        f" **Classification Report**\n\n"
+        f" The report provides a detailed performance analysis of the model."
+        f" It includes various metrics for evaluating the accuracy and effectiveness of the model.\n\n"
+        f" * In summary, the model performs exceptionally well, with high precision, recall, and F1-scores for both classes, "
+        f" and an overall accuracy of 99%.")
+
+    class_report = plt.imread(f"outputs/{version}/classification_report.png")
+    st.image(class_report, caption='Classification Report')
     st.write("---")
 
     st.write("### Generalised Performance on Test Set")
