@@ -16,5 +16,5 @@ def page_project_hypothesis_body():
         f" montage to determine the differences in the appearance of both contaminated leave "
         f" and healthy leaves.\n\n"
         f" Contaminated leaves and healthy leaves can be determined with a 97% accuracy,"
-        f" this will be verified by evaluating the model on the test dataset, which should"
-        f" achieve 97% accuracy.")
+        f" this is verified by evaluating the model on the test dataset, which achieve"
+        f" above the required accuracy of 97%.")

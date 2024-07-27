@@ -27,7 +27,7 @@ def page_cherry_leaves_visualizer_body():
         f" * Shape - Leaves may be curled, twisted, or distorted, with severe cases leading to yellowing "
         f" and early leaf drop.\n")
     
-    version = 'v3'
+    version = 'v6'
     if st.checkbox("Difference between average and variability image"):
       
       avg_powdery_mildew = plt.imread(f"outputs/{version}/avg_var_powdery_mildew.png")
