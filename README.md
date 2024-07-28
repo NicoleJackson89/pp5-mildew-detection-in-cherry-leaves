@@ -11,6 +11,7 @@ The project includes a series of Jupyter Notebooks that create a pipeline for da
 
 ## Table of Contents
 1. [Dataset Content](#dataset-content)
+2. [Business Requirements](#business-requirements)
 
 ## Dataset Content
 
@@ -23,8 +24,10 @@ The cherry plantation crop from Farmy & Foods is facing a challenge where their 
 
 To save time in this process, the IT team suggested an ML system that detects instantly, using a leaf tree image, if it is healthy or has powdery mildew. A similar manual process is in place for other crops for detecting pests, and if this initiative is successful, there is a realistic chance to replicate this project for all other crops. The dataset is a collection of cherry leaf images provided by Farmy & Foods, taken from their crops.
 
-- 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
-- 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+1. The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
+2. The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+3. The client is interested in having the option to download a prediction report for the examined leaves.
+4. It was agreed with the client to attain an accuracy rate of 97%.
 
 ## Hypothesis and how to validate?
 
