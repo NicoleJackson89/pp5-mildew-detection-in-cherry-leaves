@@ -11,7 +11,6 @@ def plot_pred_probs(pred_proba, pred_class):
     """
     Plot prediction probability results
     """
-
     prob_per_class = pd.DataFrame(
         data=[0, 0],
         index={'Healthy': 0, 'Infected': 1}.keys(),
@@ -48,7 +47,6 @@ def load_model_and_predict(my_image, version):
     """
     Load and perform ML prediction over live images
     """
-
     model = load_model(f"outputs/{version}/mildew_detector_model.h5")
 
     pred_proba = model.predict(my_image)[0, 0]
