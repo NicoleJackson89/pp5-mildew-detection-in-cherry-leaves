@@ -1,0 +1,9 @@
+outputs/v1
+outputs/v2
+outputs/v3
+outputs/v4
+outputs/v5
+outputs/v6
+jupyter_notebooks
+inputs/cherry-leaves_dataset/cherry-leaves/test/healthy
+inputs/cherry-leaves_dataset/cherry-leaves/test/powdery_mildew
