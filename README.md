@@ -474,7 +474,7 @@ Forking a GitHub repository will allow you to make a copy of the repository, cha
 
 ### Heroku deployment
 
-- The App live link is: `https://YOUR_APP_NAME.herokuapp.com/`
+- The App live link is: `https://pp5-mildew-cherry-leaf-ecc22555c3b8.herokuapp.com/`
 - Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 - The project was deployed to Heroku using the following steps.
 
