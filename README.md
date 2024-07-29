@@ -58,7 +58,7 @@ The project includes a series of Jupyter Notebooks that create a pipeline for da
     ![Augmented Images 2](assets/readme_imgs/augmented-2.png)
     </details>
 
-[Back to top ⇧](#table-of-contents)
+[Top ⇧](#table-of-contents)
 
 ## Business Requirements
 
@@ -71,7 +71,7 @@ To save time in this process, the IT team suggested an ML system that detects in
 3. The client is interested in having the option to download a prediction report for the examined leaves.
 4. It was agreed with the client to attain an accuracy rate of 97%.
 
-[Back to top ⇧](#table-of-contents)
+[Top ⇧](#table-of-contents)
 
 ## Hypothesis and how to validate?
 
@@ -82,7 +82,7 @@ Validation: By following a systematic approach that includes data preparation, m
 Cherry leaves containing powdery mildew can be distinguished from healthy leaves by their appearance. This is verified by creating an average image study and an image montage to determine the differences in the appearance of both contaminated leaves and healthy leaves.
 Contaminated leaves and healthy leaves can be determined with a 97% accuracy, this will be verified by evaluating the model on the test dataset, which achieves 99% accuracy%.
 
-[Back to top ⇧](#table-of-contents)
+[Top ⇧](#table-of-contents)
 
 ## The rationale to map the business requirements
 
@@ -136,7 +136,7 @@ Dashboard Deployment and Release:
  - User Story: As a data analyst/developer, I need to prepare & deploy the dashboard so that  users can access and make use of it no problems or setbacks. 
      - Task: Review and optimise code, prepare, configure environments & deploy.
 
-[Back to top ⇧](#table-of-contents)
+[Top ⇧](#table-of-contents)
 
 ## ML Business Case
 
@@ -161,7 +161,7 @@ Dashboard Deployment and Release:
     - Model development & training 
     - Model evaluation, testing, optimization and deployment
 
-[Back to top ⇧](#table-of-contents)
+[Top ⇧](#table-of-contents)
 
 ## ML Model Development
 
@@ -266,7 +266,7 @@ When creating the model I wanted to strive for the best possible results, but ha
 ![ROC Curve](outputs/v6/model_combined.png)
 </details>
 
-[Back to top ⇧](#table-of-contents)
+[Top ⇧](#table-of-contents)
 
 ## Dashboard Design 
 
@@ -420,7 +420,7 @@ Business Requirement 2 & 3
 ![Generalised Performance](assets/readme_imgs/generalised-info.png)
 </details>
 
-[Back to top ⇧](#table-of-contents)
+[Top ⇧](#table-of-contents)
 
 ## Manual testing 
 
@@ -433,13 +433,21 @@ Business Requirement 2 & 3
 |Image uploader: Allows to images to be uploaded and processed with the correct results|Passed|
 |Download report: Downloads a csv format report|Passed|
 
-[Back to top ⇧](#table-of-contents)
+[Top ⇧](#table-of-contents)
 
 ## Bugs
 
-- You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+### Fixed Bugs
+|What was tested / Expected results|Actual Results|What was done to fix the bug|
+|---|---|---|
+|Model Training: Training numbers to increase with each epoch|Seemed to be stuck at 50|Different things were tried but it seemed to be better with changing my batch size to 1|
+|Model Training: The rate of training to be efficient|The training process was slow and may have overfit the model|Code was amended to remove half of the overall dataset images|
+|Deployment to Heroku: Successful|Failed to build due to the max size being 500MB|Moved files to the .slugignore file|
 
-[Back to top ⇧](#table-of-contents)
+### Unfixed Bugs
+- There are no unfixed bugs.
+
+[Top ⇧](#table-of-contents)
 
 ## Deployment
 
@@ -477,7 +485,7 @@ Forking a GitHub repository will allow you to make a copy of the repository, cha
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
 6. If the slug size is too large, then add large files not required for the app to the .slugignore file.
 
-[Back to top ⇧](#table-of-contents)
+[Top ⇧](#table-of-contents)
 
 ## Main Data Analysis and Machine Learning Libraries
 
@@ -513,18 +521,31 @@ Forking a GitHub repository will allow you to make a copy of the repository, cha
     - Used to for the image across devices in the README.md
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) 
     - Used in the code & functions
+- [Chat GPT](https://chatgpt.com/) 
+    - Used to better word some of my descriptions and general assistance & guidance
 
-[Back to top ⇧](#table-of-contents)
+[Top ⇧](#table-of-contents)
 
 ## Credits
 
-- In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism.
-- You can break the credits section up into Content and Media, depending on what you have included in your project.
+- Slack community for guidance:
+  - [Slack Community](https://app.slack.com/client/T0L30B202/C027C3PLS1W)
+- This page was used for guidance and general troubleshooting of funtions:
+  - [Stackoverflow](https://stackoverflow.com)
+- Tutor Support for assistance & guidance in adding files to .slugignore when getting the Heroku build error:
+  - [Tutor Assistance](https://learn.codeinstitute.net/ci_support/diplomainfullstacksoftwarecommoncurriculum/tutor)
+- Code Institute - Walkthrough Project for steps, guidance and following along to get this far in my project 5:
+  - [Code Inst - Malaria Detector](https://shorturl.at/xFj5G)
+- Basic CNN Architecture, guidance and understanding:
+  - [Basic CNN Architecture](https://www.upgrad.com/blog/basic-cnn-architecture/)
+- Deep Learning Tutorials and Examples with MATLAB, guidance and understanding:
+  - [Deep Learning](https://shorturl.at/u3ay8)
 
-[Back to top ⇧](#table-of-contents)
+
+[Top ⇧](#table-of-contents)
 
 ## Acknowledgements
 
 Thank you to my mentor Mo Shami for his guidance, advice, support as well as my husband and fellow student Iain Jackson for his advice, motivation, troubleshooting assistance throughout the process of this project.
 
-[Back to top ⇧](#table-of-contents)
+[Top ⇧](#table-of-contents)
