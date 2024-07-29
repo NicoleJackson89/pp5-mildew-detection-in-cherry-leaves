@@ -12,6 +12,8 @@ The project includes a series of Jupyter Notebooks that create a pipeline for da
 ## Table of Contents
 1. [Dataset Content](#dataset-content)
 2. [Business Requirements](#business-requirements)
+3. [Hypothesis and Validation](#hypothesis-and-how-to-validate)
+4. [The rationale to map the business requirements](#the-rationale-to-map-the-business-requirements)
 
 ## Dataset Content
 
@@ -31,11 +33,65 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## Hypothesis and how to validate?
 
-- List here your project hypothesis(es) and how you envision validating it (them).
+Hypothesis: The machine learning model can accurately predict with the use of images whether a cherry leaf is healthy or contains powdery mildew based on its features
 
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
+Validation: By following a systematic approach that includes data preparation, model training, and evaluation of healthy cherry leaves images and those that contain powdery mildew. 
 
-- List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+Cherry leaves containing powdery mildew can be distinguished from healthy leaves by their appearance. This is verified by creating an average image study and an image montage to determine the differences in the appearance of both contaminated leaves and healthy leaves.
+Contaminated leaves and healthy leaves can be determined with a 97% accuracy, this will be verified by evaluating the model on the test dataset, which achieves 99% accuracy%.
+
+
+## The rationale to map the business requirements
+
+### Business requirements:
+- Differentiate Healthy and Powdery mildew Cherry Leaves: The main goal is to correctly identify whether cherry leaves are healthy or affected by powdery mildew.
+- High Accuracy: Meet the client's requirement by ensuring the model achieves an accuracy of at least 97%.
+- Prediction Report: Provide an option for clients to download prediction reports of the examined leaves.
+
+### Epics:
+1. Information Gathering and Data Collection: 
+    - The importation of the cherry leaf image dataset from Kaggle.
+2. Data Visualization, Cleaning, and Preparation:
+    - Data cleaning to identify and correct errors or inconsistencies in the dataset to improve its quality, data preparation to transform raw data into a format more suitable for analysis and visualisation to graphically represent the data to uncover patterns, trends, and insights.
+3. Model Training, Optimization, and Validation:
+    - To teach the model to recognise patterns from the training set, improve the model's performance by tuning its parameters and adjusting its algorithms and validate by testing the model on new data to ensure it generalises the new data well and performs accurately on the unseen data.
+4. Dashboard Planning, Designing, and Development:
+    - To ensure that the dashboard is useful, user-friendly, and effective in communicating data insights to facilitate informed decision-making.
+5. Dashboard Deployment and Release: 
+    - To ensure that the dashboard is easily accessible and functional for the end-user to utilise for decision-making.
+
+### User Stories/Tasks:
+Information Gathering and Data Collection: 
+ - User Story: As a data analyst/developer, I can gather all relevant data about cherry leaves, including images of both healthy and powdery mildew leaves, so that I can use this dataset for analysis and model training.
+    - Task: Gather and download quality images from Kaggle, label and organize them, and document the process.  
+
+Data Visualization, Cleaning, and Preparation:
+ - User Story: As a data analyst/developer, I can clean the images collected in the dataset by removing or correcting errors, duplicates or irrelevant images so that I can have a good high quality dataset that imporves the perfomance of the model.
+ - User Story: As a data analyst/developer, I need to prepare the dataset for the model training process so that I can make sure it is in the correct format and structure for the best results.
+ - User Story: As a data analyst/developer, I need to visualise the data so that I can visually understand the dataset.
+     - Task: Check the dataset for non-image files & reomove, correct any labels and remove duplicates.
+     - Task: Remove excess images (50%), create sub-folders (train, test & validation) and split the data into relevant folders with the correct ratios.
+     - Task: Plot the class distribution and display and save sample & average images, create an image montage on the two labels.
+
+Model Training, Optimization, and Validation:
+ - User Story: As a data analyst/developer, I need to train a deep learning on the newly prepared dataset so that I can accurately differentiate between healthy and powdery mildew cherry leaves.
+ - User Story: As a data analyst/developer, I need to optimise the model so that I can get at least the minimum required accuracy and performance.
+ - User Story: As a data analyst/developer, I need to validate the model so that I can make sure it generalises on unseen data.
+     - Task: Create and train a CNN with multiple layers.
+     - Task: Optimize hyperparameters to achieve a minimum accuracy of 97%, adjust batch size, epoches.
+     - Task: Evaluate the model's performance using the test data.
+
+Dashboard Planning, Designing, and Development:
+ - User Story: As a data analyst/developer, I need to plan the dashboard features so that I can make sure it meets the client's needs and business requirments.
+ - User Story: As a data analyst/developer, I need to design a user friendly dashboard so that a user can easily navigate and understand the features.
+ - User Story: As a data analyst/developer, I need to develop the dashboard inline with the design specs so that it works as it is meant to.
+     - Task: Implement features as agreed, test and debug.
+     - Task: Gather and understand requirments to meet the client's needs.
+     - Task: Must be visually appealing, user friendly, responsive and accissible of varius devices.
+
+Dashboard Deployment and Release: 
+ - User Story: As a data analyst/developer, I need to prepare & deploy the dashboard so that  users can access and make use of it no problems or setbacks. 
+     - Task: Review and optimise code, prepare, configure the production environments & deploy.
 
 ## ML Business Case
 
