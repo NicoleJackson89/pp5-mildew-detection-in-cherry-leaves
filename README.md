@@ -86,12 +86,12 @@ Contaminated leaves and healthy leaves can be determined with a 97% accuracy, th
 
 ## The rationale to map the business requirements
 
-### Business requirements:
+### Business requirements
 - Differentiate Healthy and Powdery mildew Cherry Leaves: The main goal is to correctly identify whether cherry leaves are healthy or affected by powdery mildew.
 - High Accuracy: Meet the client's requirement by ensuring the model achieves an accuracy of at least 97%.
 - Prediction Report: Provide an option for clients to download prediction reports of the examined leaves.
 
-### Epics:
+### Epics
 1. Information Gathering and Data Collection: 
     - The importation of the cherry leaf image dataset from Kaggle.
 2. Data Visualization, Cleaning, and Preparation:
@@ -103,7 +103,7 @@ Contaminated leaves and healthy leaves can be determined with a 97% accuracy, th
 5. Dashboard Deployment and Release: 
     - To ensure that the dashboard is easily accessible and functional for the end-user to utilise for decision-making.
 
-### User Stories/Tasks:
+### User Stories/Tasks
 Information Gathering and Data Collection: 
  - User Story: As a data analyst/developer, I can gather all relevant data about cherry leaves, including images of both healthy and powdery mildew leaves, so that I can use this dataset for analysis and model training.
     - Task: Gather and download quality images from Kaggle, label and organize them, and document the process.  
@@ -367,8 +367,8 @@ Business Requirement 2 & 3
         ![Label Distribution](outputs/v7/label_dist.png)
         </details>
 
-#### Model History:
-##### Model training - Accuracy and Loss
+### Model History:
+#### Model training - Accuracy and Loss
 - Accuracy measures how closely the model's predictions (accuracy) match the true data (val_acc). A good model that performs well on unseen data demonstrates its ability to generalize and avoid overfitting to the training dataset.
 - The loss is the total of errors made for each example in the training (loss) or validation (val_loss) sets. The loss value indicates how poorly or well a model performs after each optimization iteration.
     <details>
@@ -382,7 +382,7 @@ Business Requirement 2 & 3
     ![Loss](outputs/v7/model_training_losses.png)
     </details>
 
-##### The model learning ROC curve
+#### The model learning ROC curve
 - Loss (Blue) and Validation Loss (Green):
     - Loss measures the prediction accuracy, the lower the loss the better. indicating good performance on unseen data.
 - Accuracy (Orange) and Validation Accuracy (Red):
@@ -394,7 +394,7 @@ Business Requirement 2 & 3
     ![ROC curve](outputs/v7/model_combined.png)
     </details>
 
-##### Confusion Matrix
+#### Confusion Matrix
 - The confusion matrix is used to evaluate the performance of the model. It compares the actual labels (true values) with the predicted labels given by the model.
     - The model correctly identified 210 healthy instances and 209 powdery mildew instances.
     - The model made 3 mistakes: 1 healthy instance was incorrectly classified as powdery mildew, and 2 powdery mildew instances were incorrectly classified as healthy.
@@ -404,7 +404,7 @@ Business Requirement 2 & 3
     ![Confusion Matrix](outputs/v7/confusion_matrix.png)
     </details>
 
-##### Classification Report
+#### Classification Report
 - The report provides a detailed performance analysis of the model. It includes various metrics for evaluating the accuracy and effectiveness of the model.
     - In summary, the model performs exceptionally well, with high precision, recall, and F1-scores for both classes, and an overall accuracy of 99%.
     <details>
@@ -413,7 +413,7 @@ Business Requirement 2 & 3
     ![Classification Report](outputs/v7/classification_report.png)
     </details>
 
-##### Generalised Performance on Test Set
+#### Generalised Performance on Test Set
 <details>
 <summary>Generalised Performance</summary>
 
