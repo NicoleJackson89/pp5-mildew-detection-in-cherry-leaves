@@ -91,11 +91,30 @@ Dashboard Planning, Designing, and Development:
 
 Dashboard Deployment and Release: 
  - User Story: As a data analyst/developer, I need to prepare & deploy the dashboard so that  users can access and make use of it no problems or setbacks. 
-     - Task: Review and optimise code, prepare, configure the production environments & deploy.
+     - Task: Review and optimise code, prepare, configure environments & deploy.
 
 ## ML Business Case
 
-- In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+1. Business Objective
+    - Objective: By using an ML model we will solve the problem of differentiating between heathly and powdery mildew cherry leaves saving Farmy & Foods many hours of labour used for the current manual process.
+    - Business impact: To improve Farmy & Foods crop current health monitoring porcess, leading to reduced crop losses and maintaining the highest customer satisfaction.
+2. Business Problem
+    - Description & Challenges: Farmy & Foods is currently spending many hours of manual inspection is time-consuming and prone to errors when trying to identify cherry leaves affected with powdery mildew, leading to ineffective treatments and crop losses.
+    - Goals: To make use of an ML model to automatically and accurately identify cherry leaves affected with powdery mildew with at least 97% accuracy.
+3. Proposed Solution
+    - ML Approach: A Convolutional Neural Network (CNN) model will be developped to classify between healthy and affected with powdery mildew leaf images.
+    - Data Requirements: An image data set consisting of images of both healthy and affected with powdery mildew leaves.
+4. Business Value
+    - By using this model, we expect to quickly and accurately detect affected crops, allowing for early treatments, healthier plants and satisfied customers. Success will be measured by the models accuracy and how well works in detecting affected leaves. The benefits will include fewer crop losses and better quality harvests.
+5. Risk Mitigation
+    - Data Quality: Use strong methods to collect and prepare image data, including adding variety and checking quality, to ensure the dataset is diverse and of high-quality.
+    - Model Performance: The model might not reach the requireed accuracy, so it will be refined by using cross-validation and repeated testing.
+    - User: Users might resist the new system. To help, the dashboard withh be user friendly and simple to use and understand, detailed guides, support, and explanations are available.
+    - Data privacy: NDAs and ethical guidelines will be followed to keep cherry leaf images and related data confidential and secure.
+6. Implementation Plan
+    - Data collection & processing 
+    - Model development & training 
+    - Model evaluation, testing, optimization and deployment
 
 ## Dashboard Design
 
