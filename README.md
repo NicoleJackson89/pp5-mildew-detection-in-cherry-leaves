@@ -14,6 +14,8 @@ The project includes a series of Jupyter Notebooks that create a pipeline for da
 2. [Business Requirements](#business-requirements)
 3. [Hypothesis and Validation](#hypothesis-and-how-to-validate)
 4. [The rationale to map the business requirements](#the-rationale-to-map-the-business-requirements)
+5. [ML Business Case](#ml-business-case)
+6. [Dashboard Design](#dashboard-design)
 
 ## Dataset Content
 
@@ -116,10 +118,158 @@ Dashboard Deployment and Release:
     - Model development & training 
     - Model evaluation, testing, optimization and deployment
 
-## Dashboard Design
+## Dashboard Design 
 
-- List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
-- Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
+### Streamlit App User Interface.
+
+### Page 1: Quick Project Summary
+- General Information:
+    - Powdery mildew caused by Podosphaera clandestina affects cherry trees. It appears as a white or grayish powder on leaves, causing curling, yellowing, and premature leaf drop. The disease thrives in warm, dry conditions with poor air circulation.
+    - Management includes improving air flow through pruning, planting resistant varieties, and using fungicides at the first sign of symptoms. Severe cases can weaken trees and reduce fruit quality.
+    - Visual criteria for infected leaves include:
+        - Light-green, circular lesions on either leaf surface
+        - Subtle white cotton-like growth on infected areas and fruits.
+- Project Dataset:
+    - The available kaggle dataset contains 4208 images consisting of healthy and infected leaves individually photographed (2104 images were used).
+    - The data was split as follows:
+        - The training set - 70% of the data,
+        - The validation set - 10% of the data,
+        - The test set - 20% of the data.
+- Project business requirements
+    1) A study analysis to differentiate visually between a healthy and powdery mildew cherry leaves.
+    2) An accurate prediction of whether a given leaf is infected with powdery mildew or not.
+    3) Download a report detailing the predictions for the examined leaves.
+- Link to the Readme.md file for additional information. 
+
+### Page 2: Cherry Leaves Visualiser
+Business Requirement 1
+- A study that visually differentiates between a healthy and powdery mildew cherry leaf.
+- A healthy cherry leaf and a powdery mildew-infected cherry leaf can be distinguished by:
+    - Healthy Cherry Leaf:
+        - Color - Even green hue.
+        - Texture - Smooth surface with no abnormal growths or spots.
+        - Shape - Maintains its normal, undistorted form.
+    - Powdery Mildew-Infected Cherry Leaf:
+        - Color - Exhibits white or grayish powdery patches, typically starting on the upper surface.
+        - Texture - Powdery or dusty appearance on the leaf.
+        - Shape - Leaves may be curled, twisted, or distorted, with severe cases leading to yellowing and early leaf drop.
+
+<details>
+<summary>Checkbox 1 - Difference between average and variability image</summary>
+
+![Average and variability image 1](outputs/v7/avg_var_healthy.png)
+![Average and variability image 2](outputs/v7/avg_var_powdery_mildew.png)
+</details>
+<details>
+<summary>Checkbox 2 - Differences between a healthy and powdery mildew leaf</summary>
+
+![Differences image](outputs/v7/avg_diff.png)
+</details>
+<details>
+<summary>Checkbox 3 - Image Montage</summary>
+
+![Image Montage](assets/readme_imgs/montage-1.png)
+![Image Montage](assets/readme_imgs/montage-2.png)
+</details>
+
+### Page 3: Powdery Mildew Detection
+Business Requirement 2 & 3
+- Upload pictures of cherry leaves to determine if they are affected by powdery mildew and download a report of the analysis.
+- You can download a set of healthy or powdery mildew-infected leaves for a live prediction here. (A link to the kaggle dataset is availble)
+- A user can upload an image/s using the file uploader widget. An image of the uploaded image/s is shown back to the user as well as a plot visually representing the prediction that the ML model has predicted on teh image/s added by the user. An analysis report is shown with the image/s name and result is shown with a link to give the user the option of downloading the report in a csv format.
+
+<details>
+<summary>Image Uploader</summary>
+
+![Image Uploader](assets/readme_imgs/image-upload.png)
+</details>
+<details>
+<summary>Uploaded Image</summary>
+
+![Uploaded Image](assets/readme_imgs/uploaded-image.png)
+</details>
+<details>
+<summary>Prediction</summary>
+
+![Prediction](assets/readme_imgs/prediction.png)
+</details>
+<details>
+<summary>Analysis Report</summary>
+
+![Analysis Report](assets/readme_imgs/report-download.png)
+</details>
+
+### Page 4: Project hypothesis
+- Hypothesis: The machine learning model can accurately predict with the use of images whether a cherry leaf is healthy or contains powdery mildew based on its features.
+- Validation: By following a systematic approach that includes data preparation, model training, and evaluation of healthy cherry leaves images and those that contain powdery mildew.
+- Cherry leaves containing powdery mildew can be distinguished from healthy leaves by their appearance. This is verified by creating an average image study and an image montage to determine the differences in the appearance of both contaminated leave and healthy leaves.
+- Contaminated leaves and healthy leaves can be determined with a 97% accuracy, this is verified by evaluating the model on the test dataset, which achieve above the required accuracy of 97%.
+
+### Page 5: ML Performance Metrics
+#### Label Frequencies on Train, Validation and Test Sets
+- The cherry leaves dataset was divided into three subsets:
+    - The training set comprises 1,472 images, representing 70% of the entire dataset. This data is used to train the model, enabling it to generalize and make predictions on new, unseen data.
+    - The validation set comprises 210 images, representing 10% of the entire dataset. Assists in enhancing the model's performance by refining it after each epoch, which is a full pass of the training set through the model.
+    - The test set comprises 422 images, representing 20% of the entire dataset. Provides information about the model's final accuracy after the training phase is completed. This evaluation uses a batch of data that the model has never seen before.
+        <details>
+        <summary>Label Distribution Plot</summary>
+
+        ![Label Distribution](outputs/v7/label_dist.png)
+        </details>
+
+#### Model History:
+##### Model training - Accuracy and Loss
+- Accuracy measures how closely the model's predictions (accuracy) match the true data (val_acc). A good model that performs well on unseen data demonstrates its ability to generalize and avoid overfitting to the training dataset.
+- The loss is the total of errors made for each example in the training (loss) or validation (val_loss) sets. The loss value indicates how poorly or well a model performs after each optimization iteration.
+    <details>
+    <summary>Accuracy Plot</summary>
+
+    ![Accuracy](outputs/v7/model_training_accuracy.png)
+    </details>
+    <details>
+    <summary>Loss Plot</summary>
+
+    ![Loss](outputs/v7/model_training_losses.png)
+    </details>
+
+##### The model learning ROC curve
+- Loss (Blue) and Validation Loss (Green):
+    - Loss measures the prediction accuracy, the lower the loss the better. indicating good performance on unseen data.
+- Accuracy (Orange) and Validation Accuracy (Red):
+    - Accuracy measures the proportion of correct predictions.
+- In summary, both the training and validation losses decrease and stabilize at low values, indicating that the model has converged; the high training and validation accuracies show the model is performing well; and the close alignment between the training and validation metrics indicates the model is not overfitting and can generalize well on new data.
+    <details>
+    <summary>ROC curve</summary>
+
+    ![ROC curve](outputs/v7/model_combined.png)
+    </details>
+
+##### Confusion Matrix
+- The confusion matrix is used to evaluate the performance of the model. It compares the actual labels (true values) with the predicted labels given by the model.
+    - The model correctly identified 210 healthy instances and 209 powdery mildew instances.
+    - The model made 3 mistakes: 1 healthy instance was incorrectly classified as powdery mildew, and 2 powdery mildew instances were incorrectly classified as healthy.
+    <details>
+    <summary>Confusion Matrix</summary>
+
+    ![Confusion Matrix](outputs/v7/confusion_matrix.png)
+    </details>
+
+##### Classification Report
+- The report provides a detailed performance analysis of the model. It includes various metrics for evaluating the accuracy and effectiveness of the model.
+    - In summary, the model performs exceptionally well, with high precision, recall, and F1-scores for both classes, and an overall accuracy of 99%.
+    <details>
+    <summary>Classification Report</summary>
+
+    ![Classification Report](outputs/v7/classification_report.png)
+    </details>
+
+##### Generalised Performance on Test Set
+<details>
+<summary>Generalised Performance</summary>
+
+![Generalised Performance](assets/readme_imgs/generalised-info.png)
+</details>
+
 
 ## Unfixed Bugs
 
