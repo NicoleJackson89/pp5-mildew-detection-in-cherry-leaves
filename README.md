@@ -524,8 +524,6 @@ Forking a GitHub repository will allow you to make a copy of the repository, cha
 - [Chat GPT](https://chatgpt.com/) 
     - Used to better word some of my descriptions and general assistance & guidance
 
-[Top ⇧](#table-of-contents)
-
 ## Credits
 
 - Slack community for guidance:
@@ -540,9 +538,6 @@ Forking a GitHub repository will allow you to make a copy of the repository, cha
   - [Basic CNN Architecture](https://www.upgrad.com/blog/basic-cnn-architecture/)
 - Deep Learning Tutorials and Examples with MATLAB, guidance and understanding:
   - [Deep Learning](https://shorturl.at/u3ay8)
-
-
-[Top ⇧](#table-of-contents)
 
 ## Acknowledgements
 
