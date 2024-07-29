@@ -422,16 +422,16 @@ Business Requirement 2 & 3
 
 [Top ⇧](#table-of-contents)
 
-## Manual testing 
+## Manual testing
 
-|What was tested|Result|
-|---|---|
-|Menu: Selected pages displays the correct information|Passed|
-|Links: On project summary page redirect to the correct pages|Passed|
-|Checkboxes: Display the correct / relevant information / images  when selected|Passed|
-|Image Montage: The correct images are displays as per label for the selected montage|Passed|
-|Image uploader: Allows to images to be uploaded and processed with the correct results|Passed|
-|Download report: Downloads a csv format report|Passed|
+|What was tested|Result|Outcome|
+|---|---|---|
+|Menu: Click on either of the 5 pages|Each page is displayed with all the correct information as expected|Passed|
+|Menu: Click on the x|The menu hides as expected|Passed|
+|Checkboxes: Display the correct / relevant information / images when clicked|The average, variability and difference images are displayed|Passed|
+|Image Montage: The correct images are displays as per label for the selected montage|Healthy and powdery mildew image montages are randomised and shown|Passed|
+|Image uploader: Allows the user to upload images for prediction|The uploaded images are processed and teh results are correct|Passed|
+|Download report: Allows the user to download a report of the analysed images|A csv format report is downloaded|Passed|
 
 [Top ⇧](#table-of-contents)
 
