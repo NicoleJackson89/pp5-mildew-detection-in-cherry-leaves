@@ -47,3 +47,7 @@ def page_powdery_mildew_detection_body():
             st.success("Analysis Report")
             st.table(df_report)
             st.markdown(download_dataframe_as_csv(df_report), unsafe_allow_html=True)
+    
+    st.write(
+        f" For additional information, please visit the "
+        f" [Project README file](https://github.com/NicoleJackson89/pp5-mildew-detection-in-cherry-leaves#readme).")

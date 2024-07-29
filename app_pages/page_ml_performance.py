@@ -81,3 +81,9 @@ def page_ml_performance_metrics():
     st.write("### Generalised Performance on Test Set")
 
     st.dataframe(pd.DataFrame(load_test_evaluation(version), index=['Loss', 'Accuracy']))
+    st.info(
+        f" The model has achieved an accuracy of 99%")
+    
+    st.write(
+        f" For additional information, please visit the "
+        f" [Project README file](https://github.com/NicoleJackson89/pp5-mildew-detection-in-cherry-leaves#readme).")

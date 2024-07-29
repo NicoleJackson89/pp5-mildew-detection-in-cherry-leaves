@@ -18,3 +18,7 @@ def page_project_hypothesis_body():
         f"Contaminated leaves and healthy leaves can be determined with a 97% accuracy,"
         f" this is verified by evaluating the model on the test dataset, which achieve"
         f" above the required accuracy of 97%.")
+    
+    st.write(
+        f" For additional information, please visit the "
+        f" [Project README file](https://github.com/NicoleJackson89/pp5-mildew-detection-in-cherry-leaves#readme).")

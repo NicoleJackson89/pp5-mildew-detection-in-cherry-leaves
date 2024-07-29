@@ -6,7 +6,7 @@ The goal of this project is to visually differentiate between healthy cherry lea
 
 The dashboard displays the results of the data analysis, a description and evaluation of the project's hypotheses, and detailed performance metrics of the machine learning model.
 
-The project includes a series of Jupyter Notebooks that create a pipeline for data import, cleaning, visualization, and the development and evaluation of a deep learning model.
+The project includes a series of Jupyter Notebooks that create a pipeline for data import, cleaning, visualisation, and the development and evaluation of a deep learning model.
 
 
 ## Table of Contents
@@ -28,11 +28,11 @@ The project includes a series of Jupyter Notebooks that create a pipeline for da
 ## Dataset Content
 
 - The dataset used for this project is supplied by Code Institute and sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves).
-- The dataset contains +4 thousand images taken from the client's crop fields where 50% of these images were utilised for the model training, validating and testing prcess. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
+- The dataset contains +4 thousand images taken from the client's crop fields where 50% of these images were utilised for the model training, validating and testing process. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
 
-1. The data was gathered from kaggle consisting of 4208 images of healthy and powdery-mildew cherry leaves. 50% of these images were removed before splitting them into train, test and validtation folders. Non-image files were also removed.
+1. The data was gathered from kaggle consisting of 4208 images of healthy and powdery-mildew cherry leaves. 50% of these images were removed before splitting them into train, test and validatation folders. Non-image files were also removed.
 2. The dataset was split into a ratio of the training set - 70% of the data, the validation set - 10% of the data and the test set - 20% of the data. Total images were 2104.
-3. Images were all checked/resized to 256px width & 256px height to ensure consistancy throghout the dataset.
+3. Images were all checked/resized to 256px width & 256px height to ensure consistency throughout the dataset.
     <details>
     <summary>Image Dimensions</summary>
 
@@ -50,7 +50,7 @@ The project includes a series of Jupyter Notebooks that create a pipeline for da
 
     ![Image Count](outputs/v7/label_dist.png)
     </details>
-5. Images were augmented to artificially expand the training and test dataset by creating modified versions of images already available to help improve model generalization, reduce the possibility of overfitting, and enhance the model's ability to recognize patterns in varied scenarios.
+5. Images were augmented to artificially expand the training and test dataset by creating modified versions of images already available to help improve model generalisation, reduce the possibility of overfitting, and enhance the model's ability to recognize patterns in varied scenarios.
     <details>
     <summary>Augmented Images</summary>
 
@@ -80,7 +80,7 @@ Hypothesis: The machine learning model can accurately predict with the use of im
 Validation: By following a systematic approach that includes data preparation, model training, and evaluation of healthy cherry leaves images and those that contain powdery mildew. 
 
 Cherry leaves containing powdery mildew can be distinguished from healthy leaves by their appearance. This is verified by creating an average image study and an image montage to determine the differences in the appearance of both contaminated leaves and healthy leaves.
-Contaminated leaves and healthy leaves can be determined with a 97% accuracy, this will be verified by evaluating the model on the test dataset, which achieves 99% accuracy%.
+Contaminated leaves and healthy leaves can be determined with a 97% accuracy, this will be verified by evaluating the model on the test dataset, which achieves 99% accuracy.
 
 [Top ⇧](#table-of-contents)
 
@@ -106,13 +106,13 @@ Contaminated leaves and healthy leaves can be determined with a 97% accuracy, th
 ### User Stories/Tasks
 Information Gathering and Data Collection: 
  - User Story: As a data analyst/developer, I can gather all relevant data about cherry leaves, including images of both healthy and powdery mildew leaves, so that I can use this dataset for analysis and model training.
-    - Task: Gather and download quality images from Kaggle, label and organize them, and document the process.  
+    - Task: Gather and download quality images from Kaggle, label and organise them, and document the process.  
 
 Data Visualization, Cleaning, and Preparation:
- - User Story: As a data analyst/developer, I can clean the images collected in the dataset by removing or correcting errors, duplicates or irrelevant images so that I can have a good high quality dataset that imporves the perfomance of the model.
+ - User Story: As a data analyst/developer, I can clean the images collected in the dataset by removing or correcting errors, duplicates or irrelevant images so that I can have a good high quality dataset that improves the performance of the model.
  - User Story: As a data analyst/developer, I need to prepare the dataset for the model training process so that I can make sure it is in the correct format and structure for the best results.
  - User Story: As a data analyst/developer, I need to visualise the data so that I can visually understand the dataset.
-     - Task: Check the dataset for non-image files & reomove, correct any labels and remove duplicates.
+     - Task: Check the dataset for non-image files & remove, correct any labels and remove duplicates.
      - Task: Remove excess images (50%), create sub-folders (train, test & validation) and split the data into relevant folders with the correct ratios.
      - Task: Plot the class distribution and display and save sample & average images, create an image montage on the two labels.
 
@@ -121,19 +121,19 @@ Model Training, Optimization, and Validation:
  - User Story: As a data analyst/developer, I need to optimise the model so that I can get at least the minimum required accuracy and performance.
  - User Story: As a data analyst/developer, I need to validate the model so that I can make sure it generalises on unseen data.
      - Task: Create and train a CNN with multiple layers.
-     - Task: Optimize hyperparameters to achieve a minimum accuracy of 97%, adjust batch size, epoches.
+     - Task: Optimise hyperparameters to achieve a minimum accuracy of 97%, adjust batch size and epoches.
      - Task: Evaluate the model's performance using the test data.
 
 Dashboard Planning, Designing, and Development:
- - User Story: As a data analyst/developer, I need to plan the dashboard features so that I can make sure it meets the client's needs and business requirments.
- - User Story: As a data analyst/developer, I need to design a user friendly dashboard so that a user can easily navigate and understand the features.
+ - User Story: As a data analyst/developer, I need to plan the dashboard features so that I can make sure it meets the client's needs and business requirements.
+ - User Story: As a data analyst/developer, I need to design a user-friendly dashboard so that a user can easily navigate and understand the features.
  - User Story: As a data analyst/developer, I need to develop the dashboard inline with the design specs so that it works as it is meant to.
      - Task: Implement features as agreed, test and debug.
-     - Task: Gather and understand requirments to meet the client's needs.
-     - Task: Must be visually appealing, user friendly, responsive and accissible of varius devices.
+     - Task: Gather and understand requirements to meet the client's needs.
+     - Task: Must be visually appealing, user-friendly, responsive and accessible on various devices.
 
 Dashboard Deployment and Release: 
- - User Story: As a data analyst/developer, I need to prepare & deploy the dashboard so that  users can access and make use of it no problems or setbacks. 
+ - User Story: As a data analyst/developer, I need to prepare & deploy the dashboard so that  users can access and make use of it with no problems or setbacks. 
      - Task: Review and optimise code, prepare, configure environments & deploy.
 
 [Top ⇧](#table-of-contents)
@@ -141,20 +141,20 @@ Dashboard Deployment and Release:
 ## ML Business Case
 
 1. Business Objective
-    - Objective: By using an ML model we will solve the problem of differentiating between heathly and powdery mildew cherry leaves saving Farmy & Foods many hours of labour used for the current manual process.
-    - Business impact: To improve Farmy & Foods crop current health monitoring porcess, leading to reduced crop losses and maintaining the highest customer satisfaction.
+    - Objective: By using an ML model we will solve the problem of differentiating between healthy and powdery mildew cherry leaves saving Farmy & Foods many hours of labour used for the current manual process.
+    - Business impact: To improve Farmy & Foods crop current health monitoring process, leading to reduced crop losses and maintaining the highest customer satisfaction.
 2. Business Problem
     - Description & Challenges: Farmy & Foods is currently spending many hours of manual inspection is time-consuming and prone to errors when trying to identify cherry leaves affected with powdery mildew, leading to ineffective treatments and crop losses.
     - Goals: To make use of an ML model to automatically and accurately identify cherry leaves affected with powdery mildew with at least 97% accuracy.
 3. Proposed Solution
-    - ML Approach: A Convolutional Neural Network (CNN) model will be developped to classify between healthy and affected with powdery mildew leaf images.
+    - ML Approach: A Convolutional Neural Network (CNN) model will be developed to classify between healthy and affected with powdery mildew leaf images.
     - Data Requirements: An image data set consisting of images of both healthy and affected with powdery mildew leaves.
 4. Business Value
-    - By using this model, we expect to quickly and accurately detect affected crops, allowing for early treatments, healthier plants and satisfied customers. Success will be measured by the models accuracy and how well works in detecting affected leaves. The benefits will include fewer crop losses and better quality harvests.
+    - By using this model, we expect to quickly and accurately detect affected crops, allowing for early treatments, healthier plants and satisfied customers. Success will be measured by the model's accuracy and how well it works in detecting affected leaves. The benefits will include fewer crop losses and better quality harvests.
 5. Risk Mitigation
     - Data Quality: Use strong methods to collect and prepare image data, including adding variety and checking quality, to ensure the dataset is diverse and of high-quality.
-    - Model Performance: The model might not reach the requireed accuracy, so it will be refined by using cross-validation and repeated testing.
-    - User: Users might resist the new system. To help, the dashboard withh be user friendly and simple to use and understand, detailed guides, support, and explanations are available.
+    - Model Performance: The model might not reach the required accuracy, so it will be refined by using cross-validation and repeated testing.
+    - User: Users might resist the new system. To help, the dashboard withh be user-friendly and simple to use and understand, detailed guides, support, and explanations are available.
     - Data privacy: NDAs and ethical guidelines will be followed to keep cherry leaf images and related data confidential and secure.
 6. Implementation Plan
     - Data collection & processing 
@@ -166,7 +166,7 @@ Dashboard Deployment and Release:
 ## ML Model Development
 
 ### Final Model - v7
-The final model used (v7) is a Convolutional Neural Network (CNN) for classifying images into two categories. It has five convolutional layers with max-pooling, followed by a flattening layer and a dense layer. The dropout layer helps prevent overfitting. The final layer uses a sigmoid activation for binary classification. The model uses binary cross-entropy loss and is optimized with Stochastic Gradient Descent (SGD).
+The final model used (v7) is a Convolutional Neural Network (CNN) for classifying images into two categories. It has five convolutional layers with max-pooling, followed by a flattening layer and a dense layer. The dropout layer helps prevent overfitting. The final layer uses a sigmoid activation for binary classification. The model uses binary cross-entropy loss and is optimised with Stochastic Gradient Descent (SGD).
 <details>
 <summary>Final Model</summary>
 
@@ -204,7 +204,7 @@ The final model used (v7) is a Convolutional Neural Network (CNN) for classifyin
     </details>
     <details>
     <summary>ROC Curve</summary>
-    - Both the training and validation losses decrease and stabilize at low values, indicating that the model has converged; the high training and validation accuracies show the model is performing well; and the close alignment between the training and validation metrics indicates the model is not overfitting and can generalize well on new data.
+    - Both the training and validation losses decrease and stabilise at low values, indicating that the model has converged; the high training and validation accuracies show the model is performing well; and the close alignment between the training and validation metrics indicates the model is not overfitting and can generalise well on new data.
 
     ![ROC Curve](outputs/v7/model_combined.png)
     </details>
@@ -223,7 +223,7 @@ The final model used (v7) is a Convolutional Neural Network (CNN) for classifyin
     </details>
 
 ### Other Versions - Trial and Error
-When creating the model I wanted to strive for the best possible results, but had some under and over fitting to begin with. I tried adam and SBD as optimisers and founf that SGD was giviong me the best overall results so this was sued for the final model. The first model also started off with 3 convolutional layers, 2 more were added to get to the final results. Filters were amended for enhanced feature detection and improved accuracy. Additional plots were also added to assist with a better understanding of how the model was performing.
+When creating the model I wanted to strive for the best possible results, but had some under and over fitting to begin with. I tried adam and SBD as optimisers and found that SGD was giving me the best overall results so this was used for the final model. The first model also started off with 3 convolutional layers, 2 more were added to get to the final results. Filters were amended for enhanced feature detection and improved accuracy. Additional plots were also added to assist with a better understanding of how the model was performing.
 
 <details>
 <summary>v1</summary>
@@ -274,7 +274,7 @@ When creating the model I wanted to strive for the best possible results, but ha
 
 ### Page 1: Quick Project Summary
 - General Information:
-    - Powdery mildew caused by Podosphaera clandestina affects cherry trees. It appears as a white or grayish powder on leaves, causing curling, yellowing, and premature leaf drop. The disease thrives in warm, dry conditions with poor air circulation.
+    - Powdery mildew caused by Podosphaera clandestina affects cherry trees. It appears as a white or greyish powder on leaves, causing curling, yellowing, and premature leaf drop. The disease thrives in warm, dry conditions with poor air circulation.
     - Management includes improving air flow through pruning, planting resistant varieties, and using fungicides at the first sign of symptoms. Severe cases can weaken trees and reduce fruit quality.
     - Visual criteria for infected leaves include:
         - Light-green, circular lesions on either leaf surface
@@ -300,7 +300,7 @@ Business Requirement 1
         - Texture - Smooth surface with no abnormal growths or spots.
         - Shape - Maintains its normal, undistorted form.
     - Powdery Mildew-Infected Cherry Leaf:
-        - Color - Exhibits white or grayish powdery patches, typically starting on the upper surface.
+        - Color - Exhibits white or greyish powdery patches, typically starting on the upper surface.
         - Texture - Powdery or dusty appearance on the leaf.
         - Shape - Leaves may be curled, twisted, or distorted, with severe cases leading to yellowing and early leaf drop.
 
@@ -325,8 +325,8 @@ Business Requirement 1
 ### Page 3: Powdery Mildew Detection
 Business Requirement 2 & 3
 - Upload pictures of cherry leaves to determine if they are affected by powdery mildew and download a report of the analysis.
-- You can download a set of healthy or powdery mildew-infected leaves for a live prediction here. (A link to the kaggle dataset is availble)
-- A user can upload an image/s using the file uploader widget. An image of the uploaded image/s is shown back to the user as well as a plot visually representing the prediction that the ML model has predicted on teh image/s added by the user. An analysis report is shown with the image/s name and result is shown with a link to give the user the option of downloading the report in a csv format.
+- You can download a set of healthy or powdery mildew-infected leaves for a live prediction here. (A link to the kaggle dataset is available)
+- A user can upload an image/s using the file uploader widget. An image of the uploaded image/s is shown back to the user as well as a plot visually representing the prediction that the ML model has predicted on the image/s added by the user. An analysis report is shown with the image/s name and the result is shown with a link to give the user the option of downloading the report in a csv format.
 
 <details>
 <summary>Image Uploader</summary>
@@ -352,13 +352,13 @@ Business Requirement 2 & 3
 ### Page 4: Project hypothesis
 - Hypothesis: The machine learning model can accurately predict with the use of images whether a cherry leaf is healthy or contains powdery mildew based on its features.
 - Validation: By following a systematic approach that includes data preparation, model training, and evaluation of healthy cherry leaves images and those that contain powdery mildew.
-- Cherry leaves containing powdery mildew can be distinguished from healthy leaves by their appearance. This is verified by creating an average image study and an image montage to determine the differences in the appearance of both contaminated leave and healthy leaves.
-- Contaminated leaves and healthy leaves can be determined with a 97% accuracy, this is verified by evaluating the model on the test dataset, which achieve above the required accuracy of 97%.
+- Cherry leaves containing powdery mildew can be distinguished from healthy leaves by their appearance. This is verified by creating an average image study and an image montage to determine the differences in the appearance of both contaminated leaves and healthy leaves.
+- Contaminated leaves and healthy leaves can be determined with a 97% accuracy, this is verified by evaluating the model on the test dataset, which achieves above the required accuracy of 97%.
 
 ### Page 5: ML Performance Metrics
 #### Label Frequencies on Train, Validation and Test Sets
 - The cherry leaves dataset was divided into three subsets:
-    - The training set comprises 1,472 images, representing 70% of the entire dataset. This data is used to train the model, enabling it to generalize and make predictions on new, unseen data.
+    - The training set comprises 1,472 images, representing 70% of the entire dataset. This data is used to train the model, enabling it to generalise and make predictions on new, unseen data.
     - The validation set comprises 210 images, representing 10% of the entire dataset. Assists in enhancing the model's performance by refining it after each epoch, which is a full pass of the training set through the model.
     - The test set comprises 422 images, representing 20% of the entire dataset. Provides information about the model's final accuracy after the training phase is completed. This evaluation uses a batch of data that the model has never seen before.
         <details>
@@ -369,7 +369,7 @@ Business Requirement 2 & 3
 
 ### Model History:
 #### Model training - Accuracy and Loss
-- Accuracy measures how closely the model's predictions (accuracy) match the true data (val_acc). A good model that performs well on unseen data demonstrates its ability to generalize and avoid overfitting to the training dataset.
+- Accuracy measures how closely the model's predictions (accuracy) match the true data (val_acc). A good model that performs well on unseen data demonstrates its ability to generalise and avoid overfitting to the training dataset.
 - The loss is the total of errors made for each example in the training (loss) or validation (val_loss) sets. The loss value indicates how poorly or well a model performs after each optimization iteration.
     <details>
     <summary>Accuracy Plot</summary>
@@ -387,7 +387,7 @@ Business Requirement 2 & 3
     - Loss measures the prediction accuracy, the lower the loss the better. indicating good performance on unseen data.
 - Accuracy (Orange) and Validation Accuracy (Red):
     - Accuracy measures the proportion of correct predictions.
-- In summary, both the training and validation losses decrease and stabilize at low values, indicating that the model has converged; the high training and validation accuracies show the model is performing well; and the close alignment between the training and validation metrics indicates the model is not overfitting and can generalize well on new data.
+- In summary, both the training and validation losses decrease and stabilise at low values, indicating that the model has converged; the high training and validation accuracies show the model is performing well; and the close alignment between the training and validation metrics indicates the model is not overfitting and can generalise well on new data.
     <details>
     <summary>ROC curve</summary>
 
@@ -492,7 +492,7 @@ Forking a GitHub repository will allow you to make a copy of the repository, cha
 - [Pandas](https://pandas.pydata.org/)
     - Creating & saving of data as DataFrames
 - [Matplotlib](https://matplotlib.org/) 
-    - Plotting the image data sets distribution
+    - Plotting the image datasets distribution
 - [Scikit-learn](https://scikit-learn.org/) 
     - Used for model evaluation
 - [Plotly](https://plotly.com/python/) 

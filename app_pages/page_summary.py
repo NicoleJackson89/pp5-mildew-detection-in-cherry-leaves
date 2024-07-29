@@ -21,6 +21,7 @@ def page_summary_body():
         f"**Project Dataset**\n\n"
         f" The available [kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves) dataset contains "
         f" 4208 images consisting of healthy and infected leaves individually photographed (2104 images were used).\n\n"
+        f" The model has achieved an accuracy of 99% \n\n"
         f" The data was split as follows: \n\n"
         f"* The training set - 70% of the data,\n"
         f"* The validation set - 10% of the data,\n"
