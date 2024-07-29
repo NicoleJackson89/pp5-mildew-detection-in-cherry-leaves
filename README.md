@@ -17,7 +17,8 @@ The project includes a series of Jupyter Notebooks that create a pipeline for da
 5. [ML Business Case](#ml-business-case)
 6. [ML Model Development](#ml-model-development)
 7. [Dashboard Design](#dashboard-design)
-8. [Unfixed Bugs](#unfixed-bugs)
+8. [Manual testing](#manual-testing)
+8. [Bugs](#bugs)
 9. [Deployment](#deployment)
 10. [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
 11. [Technologies and Languages Used](#technologies-and-languages-used)
@@ -421,7 +422,20 @@ Business Requirement 2 & 3
 
 [Back to top ⇧](#table-of-contents)
 
-## Unfixed Bugs
+## Manual testing 
+
+|What was tested|Result|
+|---|---|
+|Menu: Selected pages displays the correct information|Passed|
+|Links: On project summary page redirect to the correct pages|Passed|
+|Checkboxes: Display the correct / relevant information / images  when selected|Passed|
+|Image Montage: The correct images are displays as per label for the selected montage|Passed|
+|Image uploader: Allows to images to be uploaded and processed with the correct results|Passed|
+|Download report: Downloads a csv format report|Passed|
+
+[Back to top ⇧](#table-of-contents)
+
+## Bugs
 
 - You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 
