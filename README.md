@@ -15,12 +15,42 @@ The project includes a series of Jupyter Notebooks that create a pipeline for da
 3. [Hypothesis and Validation](#hypothesis-and-how-to-validate)
 4. [The rationale to map the business requirements](#the-rationale-to-map-the-business-requirements)
 5. [ML Business Case](#ml-business-case)
-6. [Dashboard Design](#dashboard-design)
+6. [ML Model Development](#ml-model-development)
+7. [Dashboard Design](#dashboard-design)
+8. [Unfixed Bugs](#unfixed-bugs)
 
 ## Dataset Content
 
 - The dataset used for this project is supplied by Code Institute and sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves).
 - The dataset contains +4 thousand images taken from the client's crop fields where 50% of these images were utilised for the model training, validating and testing prcess. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
+
+1. The data was gathered from kaggle consisting of 4208 images of healthy and powdery-mildew cherry leaves. 50% of these images were removed before splitting them into train, test and validtation folders. Non-image files were also removed.
+2. The dataset was split into a ratio of the training set - 70% of the data, the validation set - 10% of the data and the test set - 20% of the data. Total images were 2104.
+3. Images were all checked/resized to 256px width & 256px height to ensure consistancy throghout the dataset.
+    <details>
+    <summary>Image Dimensions</summary>
+
+    ![Image Dimension](assets/readme_imgs/image-dim.png)
+    </details>
+4. The count of images in each folder were as follows: 
+    - Train - Healthy: 736 images
+    - Train - Powdery Mildew: 736 images
+    - Validation - Healthy: 105 images
+    - Validation - Powdery Mildew: 105 images
+    - Test - Healthy: 211 images
+    - Test - Powdery Mildew: 211 images
+    <details>
+    <summary>Image Count per Label</summary>
+
+    ![Image Count](outputs/v7/label_dist.png)
+    </details>
+5. Images were augmented to artificially expand the training and test dataset by creating modified versions of images already available to help improve model generalization, reduce the possibility of overfitting, and enhance the model's ability to recognize patterns in varied scenarios.
+    <details>
+    <summary>Augmented Images</summary>
+
+    ![Augmented Images 1](assets/readme_imgs/augmented-1.png)
+    ![Augmented Images 2](assets/readme_imgs/augmented-2.png)
+    </details>
 
 ## Business Requirements
 
@@ -41,7 +71,6 @@ Validation: By following a systematic approach that includes data preparation, m
 
 Cherry leaves containing powdery mildew can be distinguished from healthy leaves by their appearance. This is verified by creating an average image study and an image montage to determine the differences in the appearance of both contaminated leaves and healthy leaves.
 Contaminated leaves and healthy leaves can be determined with a 97% accuracy, this will be verified by evaluating the model on the test dataset, which achieves 99% accuracy%.
-
 
 ## The rationale to map the business requirements
 
@@ -117,6 +146,16 @@ Dashboard Deployment and Release:
     - Data collection & processing 
     - Model development & training 
     - Model evaluation, testing, optimization and deployment
+
+## ML Model Development
+
+The final model used (V7) is a Convolutional Neural Network (CNN) for classifying images into two categories. It has five convolutional layers with max-pooling, followed by a flattening layer and a dense layer. The dropout layer helps prevent overfitting. The final layer uses a sigmoid activation for binary classification. The model uses binary cross-entropy loss and is optimized with Stochastic Gradient Descent (SGD).
+ 
+
+
+
+
+
 
 ## Dashboard Design 
 
