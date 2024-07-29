@@ -149,13 +149,106 @@ Dashboard Deployment and Release:
 
 ## ML Model Development
 
-The final model used (V7) is a Convolutional Neural Network (CNN) for classifying images into two categories. It has five convolutional layers with max-pooling, followed by a flattening layer and a dense layer. The dropout layer helps prevent overfitting. The final layer uses a sigmoid activation for binary classification. The model uses binary cross-entropy loss and is optimized with Stochastic Gradient Descent (SGD).
- 
+### Final Model - v7
+The final model used (v7) is a Convolutional Neural Network (CNN) for classifying images into two categories. It has five convolutional layers with max-pooling, followed by a flattening layer and a dense layer. The dropout layer helps prevent overfitting. The final layer uses a sigmoid activation for binary classification. The model uses binary cross-entropy loss and is optimized with Stochastic Gradient Descent (SGD).
+<details>
+<summary>Final Model</summary>
 
+![Final Model](assets/readme_imgs/final-model.png)
+</details>
 
+5 layers were created to detect, extract & capture features in the images, higher filters were then set for deeper feature extraction and pattern capturing. All 5 layers were set to a 3x3 kernel.
+1. Convolutional Layers: 
+    - First Layer: Uses 16 filters
+    - Second Layer: Uses 32 filters
+    - Third Layer: Uses 64 filters 
+    - Fourth Layer: Uses 128 filters
+2. Max-Pooling Layers:
+    - Max-pooling is applied after each convolutional layer reducing the size of the feature maps, keeping the essential information and making computation easier.
+3. Flatten Layer:
+    - The flatten layer is applied to convert the 2D feature maps from the convolutional layers into a 1D vector to feed into the dense layers.
+4. Dense Layers:
+    - First Layer: Contains 128 neurons that use ReLU activation to learn patterns from the data.
+    - Dropout Layer: Turns off 50% of the neurons randomly during training to prevent overfitting.
+    - Output Layer: Contains 1 neuron that uses sigmoid activation to give a probability for binary classification.
+5. Compilation:
+    - Loss: Uses binary cross-entropy to measure how well the model performs on binary classification.
+    - Optimizer: Uses Stochastic Gradient Descent (SGD) to adjust the model's parameters and reduce errors.
+    - Metrica: Measures how accurate the model's predictions are.
+- Model Performance:
+    <details>
+    <summary>Loss</summary>
 
+    ![Loss](outputs/v7/model_training_losses.png)
+    </details>
+    <details>
+    <summary>Accuracy</summary>
 
+    ![Accuracy](outputs/v7/model_training_accuracy.png)
+    </details>
+    <details>
+    <summary>ROC Curve</summary>
+    - Both the training and validation losses decrease and stabilize at low values, indicating that the model has converged; the high training and validation accuracies show the model is performing well; and the close alignment between the training and validation metrics indicates the model is not overfitting and can generalize well on new data.
 
+    ![ROC Curve](outputs/v7/model_combined.png)
+    </details>
+    <details>
+    <summary>Confusion Matrix</summary>
+    - The model correctly identified 210 healthy and 209 powdery mildew instances, with 3 errors: 1 healthy instance misclassified as powdery mildew and 2 powdery mildew instances misclassified as healthy.
+
+    ![Confusion Matrix](outputs/v7/confusion_matrix.png)
+    </details>
+
+    <details>
+    <summary>Classification Report</summary>
+    - The model performs exceptionally well, with high precision, recall, and F1-scores for both classes, and an overall accuracy of 99%.
+
+    ![Classification Report](outputs/v7/classification_report.png)
+    </details>
+
+### Other Versions - Trial and Error
+When creating the model I wanted to strive for the best possible results, but had some under and over fitting to begin with. I tried adam and SBD as optimisers and founf that SGD was giviong me the best overall results so this was sued for the final model. The first model also started off with 3 convolutional layers, 2 more were added to get to the final results. Filters were amended for enhanced feature detection and improved accuracy. Additional plots were also added to assist with a better understanding of how the model was performing.
+
+<details>
+<summary>v1</summary>
+
+![Loss](outputs/v1/model_training_losses.png)
+![Accuracy](outputs/v1/model_training_accuracy.png)
+</details>
+<details>
+<summary>v2</summary>
+
+![Loss](outputs/v2/model_training_losses.png)
+![Accuracy](outputs/v2/model_training_accuracy.png)
+</details>
+<details>
+<summary>v3</summary>
+
+![Loss](outputs/v3/model_training_losses.png)
+![Accuracy](outputs/v3/model_training_accuracy.png)
+![ROC Curve](outputs/v3/model_combined.png)
+</details>
+<details>
+<summary>v4</summary>
+
+![Loss](outputs/v4/model_training_losses.png)
+![Accuracy](outputs/v4/model_training_accuracy.png)
+![ROC Curve](outputs/v4/model_combined.png)
+</details>
+<details>
+<summary>v5</summary>
+
+![Loss](outputs/v5/model_training_losses.png)
+![Accuracy](outputs/v5/model_training_accuracy.png)
+![ROC Curve](outputs/v5/model_combined.png)
+</details>
+<details>
+<summary>v6</summary>
+
+![Loss](outputs/v6/model_training_losses.png)
+![Accuracy](outputs/v6/model_training_accuracy.png)
+![ROC Curve](outputs/v6/model_combined.png)
+</details>
 
 ## Dashboard Design 
 
