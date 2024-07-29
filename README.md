@@ -18,6 +18,11 @@ The project includes a series of Jupyter Notebooks that create a pipeline for da
 6. [ML Model Development](#ml-model-development)
 7. [Dashboard Design](#dashboard-design)
 8. [Unfixed Bugs](#unfixed-bugs)
+9. [Deployment](#deployment)
+10. [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+11. [Technologies and Languages Used](#technologies-and-languages-used)
+12. [Credits](#credits)
+13. [Acknowledgements](#acknowledgements)
 
 ## Dataset Content
 
@@ -52,6 +57,8 @@ The project includes a series of Jupyter Notebooks that create a pipeline for da
     ![Augmented Images 2](assets/readme_imgs/augmented-2.png)
     </details>
 
+[Back to top ⇧](#table-of-contents)
+
 ## Business Requirements
 
 The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is manual verification if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If there is powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute. The company has thousands of cherry trees located on multiple farms across the country. As a result, this manual process is not scalable due to the time spent in the manual process inspection.
@@ -63,6 +70,8 @@ To save time in this process, the IT team suggested an ML system that detects in
 3. The client is interested in having the option to download a prediction report for the examined leaves.
 4. It was agreed with the client to attain an accuracy rate of 97%.
 
+[Back to top ⇧](#table-of-contents)
+
 ## Hypothesis and how to validate?
 
 Hypothesis: The machine learning model can accurately predict with the use of images whether a cherry leaf is healthy or contains powdery mildew based on its features
@@ -71,6 +80,8 @@ Validation: By following a systematic approach that includes data preparation, m
 
 Cherry leaves containing powdery mildew can be distinguished from healthy leaves by their appearance. This is verified by creating an average image study and an image montage to determine the differences in the appearance of both contaminated leaves and healthy leaves.
 Contaminated leaves and healthy leaves can be determined with a 97% accuracy, this will be verified by evaluating the model on the test dataset, which achieves 99% accuracy%.
+
+[Back to top ⇧](#table-of-contents)
 
 ## The rationale to map the business requirements
 
@@ -124,6 +135,8 @@ Dashboard Deployment and Release:
  - User Story: As a data analyst/developer, I need to prepare & deploy the dashboard so that  users can access and make use of it no problems or setbacks. 
      - Task: Review and optimise code, prepare, configure environments & deploy.
 
+[Back to top ⇧](#table-of-contents)
+
 ## ML Business Case
 
 1. Business Objective
@@ -146,6 +159,8 @@ Dashboard Deployment and Release:
     - Data collection & processing 
     - Model development & training 
     - Model evaluation, testing, optimization and deployment
+
+[Back to top ⇧](#table-of-contents)
 
 ## ML Model Development
 
@@ -249,6 +264,8 @@ When creating the model I wanted to strive for the best possible results, but ha
 ![Accuracy](outputs/v6/model_training_accuracy.png)
 ![ROC Curve](outputs/v6/model_combined.png)
 </details>
+
+[Back to top ⇧](#table-of-contents)
 
 ## Dashboard Design 
 
@@ -402,12 +419,36 @@ Business Requirement 2 & 3
 ![Generalised Performance](assets/readme_imgs/generalised-info.png)
 </details>
 
+[Back to top ⇧](#table-of-contents)
 
 ## Unfixed Bugs
 
 - You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 
+[Back to top ⇧](#table-of-contents)
+
 ## Deployment
+
+### Cloning the [GitHub](https://github.com/) repository
+
+Cloning a repository will download a full copy of the data to your computer. This is useful when larger commits need to be pushed, adding or removing files and fixing merge conflicts.
+
+1. Login to GitHub
+2. Click the repository you wish to clone (Top left corner)
+3. Click 'Code' which is shown above the list of files in the repository
+4. Click the 'Local' tab, copy the HTTPS URL
+5. Open Gitpod Workspaces, click 'New Workspace'
+6. Paste the copied URL into the space given under 'Repository URL'
+7. Click 'Continue' and the local clone will be created.
+
+### Forking the [GitHub](https://github.com/) repository
+
+Forking a GitHub repository will allow you to make a copy of the repository, changes can then be made that will not affect the original repository. This is useful for proposed changes, ideas, fixes to an original repository.
+
+1. Login to GitHub
+2. Click the repository you wish to fork (Top left corner)
+3. Click the 'Fork' drop-down in the top right-hand corner
+4. Then click 'Create a new fork' you will now have a copy to work on.
 
 ### Heroku
 
@@ -422,26 +463,54 @@ Business Requirement 2 & 3
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
 6. If the slug size is too large, then add large files not required for the app to the .slugignore file.
 
+[Back to top ⇧](#table-of-contents)
+
 ## Main Data Analysis and Machine Learning Libraries
 
-- Here, you should list the libraries used in the project and provide an example(s) of how you used these libraries.
+- [Pandas](https://pandas.pydata.org/)
+    - Creating & saving of data as DataFrames
+- [Matplotlib](https://matplotlib.org/) 
+    - Plotting the image data sets distribution
+- [Scikit-learn](https://scikit-learn.org/) 
+    - Used for model evaluation
+- [Plotly](https://plotly.com/python/) 
+    - Used to plot data
+- [NumPy](https://numpy.org/) 
+    - Converting images to NumPy arrays, other libraries used in this project are dependent on NumPy
+- [Seaborn](https://seaborn.pydata.org/) 
+    - Used to plot data and scatter plot
+- [PIL Image](https://pillow.readthedocs.io/en/stable/reference/Image.html) 
+    - Used for image manipulation
+- [TensorFlow](https://www.tensorflow.org/versions/r2.6/api_docs/python/tf) 
+    - ML library used to create the model
+- [Keras](https://keras.io/) 
+    - Setting of hyperparameter 
+
+## Technologies and Languages Used
+- [Git & GitHub](https://github.com/)
+    - Version control and storage code
+- [GitPod](https://www.gitpod.io/) 
+    - Used as the development environment
+- [Heroku](https://www.heroku.com/) 
+    - Used to deploy the site (Cloud based)
+- [Streamlit](https://streamlit.io/) 
+    - Dashboard for presentation of project
+- [Am I Responsive](https://ui.dev/amiresponsive) 
+    - Used to for the image across devices in the README.md
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) 
+    - Used in the code & functions
+
+[Back to top ⇧](#table-of-contents)
 
 ## Credits
 
 - In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism.
 - You can break the credits section up into Content and Media, depending on what you have included in your project.
 
-### Content
+[Back to top ⇧](#table-of-contents)
 
-- The text for the Home page was taken from Wikipedia Article A.
-- Instructions on how to implement form validation on the Sign-Up page were taken from [Specific YouTube Tutorial](https://www.youtube.com/).
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
+## Acknowledgements
 
-### Media
+Thank you to my mentor Mo Shami for his guidance, advice, support as well as my husband and fellow student Iain Jackson for his advice, motivation, troubleshooting assistance throughout the process of this project.
 
-- The photos used on the home and sign-up page are from This Open-Source site.
-- The images used for the gallery page were taken from this other open-source site.
-
-## Acknowledgements (optional)
-
-- Thank the people who provided support throughout this project.
+[Back to top ⇧](#table-of-contents)
